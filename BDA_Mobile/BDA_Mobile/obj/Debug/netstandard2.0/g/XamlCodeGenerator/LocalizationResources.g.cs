@@ -1,0 +1,1 @@
+[assembly: global::System.Reflection.AssemblyMetadata("UnoHasLocalizationResources", "False")]

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 Title="Sobre"
+             x:Class="BDA_Mobile.Page1">
+
+	<ContentPage.Content>
+		<StackLayout>
+			<Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+		</StackLayout>
+	</ContentPage.Content>
+
+	<Grid>
+
+		<Image Source="background_5_azul.png" Aspect="AspectFill" />
+	
+
+
+	<StackLayout>
+		<Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+			<Label Text="Gerenciamento de Dados BDA" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"/>
+		</Frame>
+			<Label Text="Sobre o Gerenciador de Dados:" FontAttributes="Bold" FontSize="22" TextColor="Black" Padding="30,10,30,10"/>
+			<Label Text="Desenvolvido por Balão da Alegria, para quantificar total de crianças nos eventos, pelo Sexo e Idade.&#xA;Gerando um relatorio geral de controle das informações inseridas.&#xA;Exportado em arquivo Excel. Atenciosamente. &#xA;Equipe BDA." TextColor=" Black"  FontSize="20" Padding="30,0,30,0"/>
+		<Label FontSize="16" Padding="30,24,30,0">
+			<Label.FormattedText>
+				<FormattedString>
+					<FormattedString.Spans>
+							<Span Text="Para mais informações consulte nosso site: " TextColor="Black" FontSize="20"/>
+							<Span Text="http://balaodaalegria.com/" TextColor="Blue" FontSize="18">
+								<Span.GestureRecognizers>
+									<TapGestureRecognizer Tapped="OnLinkTapped" />
+								</Span.GestureRecognizers>
+							</Span>
+						</FormattedString.Spans> 
+				</FormattedString>
+			</Label.FormattedText>
+		</Label>
+		<Frame Padding="24" CornerRadius="0" VerticalOptions="CenterAndExpand" BackgroundColor="Transparent">
+			<StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" >
+				<Image Source="BDA.jpeg" HeightRequest="100" VerticalOptions="Center"/>
+				<Label Text="Balão da Alegria" FontSize="20" VerticalOptions="Center" TextColor="#2196F3"/>
+			</StackLayout>
+		</Frame>
+		<StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+			<Button Text="Clique Aqui!" BackgroundColor="#2196F3" TextColor="White"  Clicked="Button_clicked"/>
+			
+		</StackLayout>
+
+	</StackLayout>
+	</Grid>
+</ContentPage>
+

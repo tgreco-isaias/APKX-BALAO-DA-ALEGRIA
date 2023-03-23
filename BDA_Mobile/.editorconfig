@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# IDE0005: O uso da diretiva é desnecessário.
+dotnet_diagnostic.IDE0005.severity = none
+
+# IDE0045: Converter em expressão condicional
+dotnet_style_prefer_conditional_expression_over_assignment = true

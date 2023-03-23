@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BDA_Mobile.Cadastro">
+
+	<ContentPage.Content>
+	<Grid>
+			<Image Source="background_3.png" Aspect="AspectFill" />
+		
+			<StackLayout>
+			<!-- Titulo -->
+			<StackLayout Padding="80" VerticalOptions="Start" HorizontalOptions="Center">
+				<Label Text= "CADASTRO BDA" FontSize="Title" TextColor="Black" FontAttributes="Bold"/>
+			</StackLayout>
+
+			<!-- Tela de criação -->
+			<Frame BackgroundColor="Transparent" Margin="20">
+				<StackLayout>
+						<Label Text="E-mail" FontSize="Large" TextColor="Black" FontFamily="Arial" FontAttributes="Bold" HorizontalOptions="Start"/>
+					<Entry x:Name="TXTCriarEmail" Keyboard="Email" ReturnType="Next"
+                               ClearButtonVisibility="WhileEditing"/>
+						<Label Text="Senha" FontSize="Large" TextColor="Black" FontFamily="Arial" FontAttributes="Bold" HorizontalOptions="Start"/>
+					<Entry x:Name="TXTCriarSenha" Keyboard="Default" ReturnType="Next" IsPassword="True"
+                               ClearButtonVisibility="WhileEditing" />
+						<Label Text="Confirmar Senha" FontSize="Large" TextColor="Black" FontFamily="Arial" FontAttributes="Bold" HorizontalOptions="Start"/>
+					<Entry x:Name="TXTConfirmarSenha" Keyboard="Default" ReturnType="Done" IsPassword="True"
+                               ClearButtonVisibility="WhileEditing" />
+				</StackLayout>
+			</Frame>
+				<Button x:Name="BTNCriarAcesso" Text="Criar" FontSize="Subtitle" BackgroundColor="Black" TextColor="White"  FontAttributes="Bold"
+                        CornerRadius="20" HorizontalOptions="Center"
+					Clicked ="BTNCriarAcesso_Clicked_1"/>
+				<Button x:Name="BTNCancelar" Text="APAGAR DADOS INSERIDOS" 
+                        FontAttributes="Bold" TextTransform="None"
+                        BackgroundColor="Black" TextColor="White"
+                        CornerRadius="20" HorizontalOptions="Center"
+					Clicked="BTNCancelar_Clicked"   FontSize="Subtitle" FontFamily="Arial"/>
+
+			</StackLayout>
+
+			<BoxView x:Name="BVTelaPreta" Color="White" Opacity="1" IsVisible="{Binding IsLoading}" />
+			<StackLayout x:Name="LbCarregando" Padding="80" VerticalOptions="Start" HorizontalOptions="Center"  IsVisible="{Binding IsLoading}">
+				<Label Text="Carregando..." FontSize="Title" TextColor="Black" FontAttributes="Bold"/>
+			</StackLayout>
+			<Image x:Name="ImgLoading" Source="fundo_animado" IsAnimationPlaying="true" Aspect="AspectFit" Scale="0.3" BackgroundColor="Transparent" IsVisible="{Binding IsLoading}" />
+
+
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

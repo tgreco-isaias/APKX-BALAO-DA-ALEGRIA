@@ -1,0 +1,68 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:bda_mobile="clr-namespace:BDA_Mobile" 
+
+			 x:Class="BDA_Mobile.MainPage">
+
+
+
+	<Grid>
+
+
+		<Image Source="background_2.png" Aspect="Fill" />
+
+
+		<StackLayout>
+			<!-- Titulo -->
+			<StackLayout Padding="80" VerticalOptions="Start" HorizontalOptions="Center">
+				<Label Text="LOGIN" FontSize="Title" TextColor="Black" FontFamily="Arial" FontAttributes="Bold" HorizontalOptions="Start"/>
+			</StackLayout>
+
+
+			<!-- Tela de login -->
+			<StackLayout VerticalOptions="Center">
+				<Frame BackgroundColor="Transparent" Margin="20">
+					<StackLayout>
+						<Label Text="E-mail" FontSize="Large" TextColor="Black" FontFamily="Arial" FontAttributes="Bold" HorizontalOptions="Start" />
+						<Entry x:Name="TXTEmail" Keyboard="Email" ReturnType="Next" 
+                           ClearButtonVisibility="WhileEditing"/>
+						<Label Text="Senha" FontSize="Large" TextColor="Black" FontFamily="Arial" FontAttributes="Bold" HorizontalOptions="Start"/>
+						<Entry x:Name="TXTSenha" Keyboard="Default" ReturnType="Done" IsPassword="True"
+                           ClearButtonVisibility="WhileEditing" />
+					</StackLayout>
+				</Frame>
+				<Button x:Name="BTNLogar" Text="Logar" BackgroundColor="Black" TextColor="White"
+                    CornerRadius="20" HorizontalOptions="Center"
+							Clicked="BTNLogar_Clicked"/>
+				<Button x:Name="BTNCriar" Text="Não tem uma conta? Criar uma conta."
+                    FontAttributes="Bold" TextTransform="None" FontSize="18"
+                    BackgroundColor="Transparent" TextColor="Red" 
+                    CornerRadius="20" HorizontalOptions="Center"
+                        Clicked="BTNCriar_Clicked"
+                        />
+				<Button x:Name="BtnResetPassword" Text="Esqueceu sua senha? Clique aqui!"
+                    FontAttributes="Bold" TextTransform="None" FontSize="18"
+                    BackgroundColor="Transparent" TextColor="Red" 
+                    CornerRadius="20" HorizontalOptions="Center"
+                        Clicked="BTNResetPassword_Clicked"
+                        />
+			</StackLayout>
+		</StackLayout>
+
+		<!-- Botão de "Sobre" -->
+		<StackLayout VerticalOptions="End">
+			<Button x:Name="BTNSobre" Text="Sobre"
+                    FontAttributes="Bold" TextTransform="None"
+                    BackgroundColor="Transparent" TextColor="Red" 
+                    CornerRadius="20" HorizontalOptions="Center" FontSize="Large" FontFamily="Arial" 
+						Clicked="BTNSobre_Clicked"/>
+
+		</StackLayout>
+
+		<BoxView x:Name="BVTelaPreta" Color="White" Opacity="1" IsVisible="{Binding IsLoading}" />
+		<StackLayout x:Name="LbCarregando" Padding="80" VerticalOptions="Start" HorizontalOptions="Center"  IsVisible="{Binding IsLoading}">
+				<Label Text="Carregando..." FontSize="Title" TextColor="Black" FontAttributes="Bold"/>
+			</StackLayout>
+		<Image x:Name="ImgLoading" Source="fundo_animado" IsAnimationPlaying="true" Aspect="AspectFit" Scale="0.3" BackgroundColor="Transparent" IsVisible="{Binding IsLoading}" />
+
+	</Grid>
+</ContentPage>

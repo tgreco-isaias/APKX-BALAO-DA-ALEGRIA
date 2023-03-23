@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BDA_Mobile.Relatorio">
+
+	<Grid>
+
+		<Image Source="background_5_azul.png" Aspect="AspectFill" />
+	
+	<ScrollView>
+		
+	<StackLayout>
+
+				
+			<StackLayout Orientation="Vertical">
+			<!--<Label Text="Idade:" FontSize="20" VerticalOptions="Center" FontAttributes="Bold" />-->
+			<!--<RadioButton Content="3-5" GroupName="Idade" CheckedChanged="OnOpcaoSelecionada" />
+			<RadioButton Content="6-8" GroupName="Idade" CheckedChanged="OnOpcaoSelecionada" />
+			<RadioButton Content="9+" GroupName="Idade" CheckedChanged="OnOpcaoSelecionada" />-->
+			<!--<Label Text="Quantidade de crianças 3-5:" FontSize="20" VerticalOptions="Center" Padding="10" FontAttributes="Bold"/>
+			<Entry Placeholder="Digite a quantidade" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" />
+			<Label Text="Quantidade de crianças 6-8:" FontSize="20" VerticalOptions="Center" Padding="10" FontAttributes="Bold"/>
+			<Entry Placeholder="Digite a quantidade" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" />
+			<Label Text="Quantidade de crianças 9+:" FontSize="20" VerticalOptions="Center" Padding="10" FontAttributes="Bold"/>
+			<Entry Placeholder="Digite a quantidade" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" />-->
+
+		</StackLayout>
+		<StackLayout Orientation="Vertical">
+			<Label Text="RELATÓRIO BDA" FontSize="20" VerticalOptions="Center" Padding="10" FontAttributes="Bold" TextColor="Black" />
+					<Label Text="PREENCHA TODOS OS CAMPOS:" FontSize="20" VerticalOptions="Center" Padding="10" FontAttributes="Bold" TextColor="Black" />
+					<!--<RadioButton Content="Feminino" GroupName="Sexo" CheckedChanged="OnOpcaoSelecionada" />
+			<RadioButton Content="Masculino" GroupName="Sexo" CheckedChanged="OnOpcaoSelecionada" />-->
+					<Label Text="Quantidade de Meninos:" FontSize="20" VerticalOptions="Center" Padding="10" FontAttributes="Bold" TextColor="Black"/>
+					<Entry x:Name="entryMeninos3_5anos" Placeholder="Total de 3-5 anos" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" TextChanged="Entry_QuantidadeChanged" TextColor="Black" />
+					<Entry x:Name="entryMeninos6_8anos" Placeholder="Total de 6-8 anos" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" TextChanged="Entry_QuantidadeChanged" TextColor="Black" />
+					<Entry x:Name="entryMeninos9Maisanos" Placeholder="Total de 9+ anos" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" TextChanged="Entry_QuantidadeChanged" TextColor="Black" />
+				<!--<Label Text="Quantidade de crianças 3-5:" FontSize="20" VerticalOptions="Center" Padding="10" FontAttributes="Bold"/>
+				<Entry Placeholder="Digite a quantidade" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" />
+				<Label Text="Quantidade de crianças 6-8:" FontSize="20" VerticalOptions="Center" Padding="10" FontAttributes="Bold"/>
+				<Entry Placeholder="Digite a quantidade" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" />
+				<Label Text="Quantidade de crianças 9+:" FontSize="20" VerticalOptions="Center" Padding="10" FontAttributes="Bold"/>
+				<Entry Placeholder="Digite a quantidade" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" />-->
+
+					<Label Text="Quantidade de Meninas:" FontSize="20" VerticalOptions="Center" Padding="10" FontAttributes="Bold" TextColor="Black"/>
+			<!--<Entry Placeholder="Digite a quantidade" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" />
+				<Label Text="Quantidade de crianças 3-5:" FontSize="20" VerticalOptions="Center" Padding="10" FontAttributes="Bold"/>
+				<Entry Placeholder="Digite a quantidade" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" />
+				<Label Text="Quantidade de crianças 6-8:" FontSize="20" VerticalOptions="Center" Padding="10" FontAttributes="Bold"/>
+				<Entry Placeholder="Digite a quantidade" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" />
+				<Label Text="Quantidade de crianças 9+:" FontSize="20" VerticalOptions="Center" Padding="10" FontAttributes="Bold"/>
+				<Entry Placeholder="Digite a quantidade" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" />-->
+					<Entry x:Name="entryMeninas3_5anos" Placeholder="Total de 3-5 anos" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" TextChanged="Entry_QuantidadeChanged" TextColor="Black" />
+					<Entry x:Name="entryMeninas6_8anos" Placeholder="Total de 6-8 anos" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" TextChanged="Entry_QuantidadeChanged" TextColor="Black" />
+					<Entry x:Name="entryMeninas9Maisanos" Placeholder="Total de 9+ anos" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" TextChanged="Entry_QuantidadeChanged" TextColor="Black" />
+
+					<Label Text="Quantidade Total de Crianças:" FontSize="20" VerticalOptions="Center" Padding="10" FontAttributes="Bold" TextColor="Black" />
+					<Entry x:Name="entryTotalGeral" Placeholder="Quantidade geral gerada automática" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" TextColor="Black" PlaceholderColor="Black" />
+
+
+					<Entry Placeholder="Digite seu Nome Completo" x:Name="NomeRecreador" Keyboard="Text" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" TextColor="Black" PlaceholderColor="Black" />
+					<Entry Placeholder="Nome de Recreador" x:Name="NomeArtistico" Keyboard="Text" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" TextColor="Black" PlaceholderColor="Black" />
+					<Entry Placeholder="Nome do Condominio" x:Name="NomeCondominio" Keyboard="Text" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10" TextColor="Black" PlaceholderColor="Black" />
+				
+				<StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+					<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+							<Button Text="Gerar Relatório" Clicked="OnGerarRelatorio" HorizontalOptions="Center" CornerRadius="20" TextColor="White" >
+							<Button.Triggers>
+								<Trigger TargetType="Button" Property="IsPressed" Value="True">
+									<Setter Property="BackgroundColor" Value="Gray" />
+								</Trigger>
+								<Trigger TargetType="Button" Property="IsPressed" Value="False">
+									<Setter Property="BackgroundColor" Value="Black" />
+								</Trigger>
+							</Button.Triggers>
+						</Button>
+					</StackLayout>
+				</StackLayout>
+			
+			
+			</StackLayout>
+
+			<BoxView x:Name="BVTelaPreta" Color="White" Opacity="1" IsVisible="{Binding IsLoading}" />
+			<StackLayout x:Name="LbCarregando" Padding="80" VerticalOptions="Start" HorizontalOptions="Center"  IsVisible="{Binding IsLoading}">
+				<Label Text="Carregando..." FontSize="Title" TextColor="Black" FontAttributes="Bold"/>
+			</StackLayout>
+			<Image x:Name="ImgLoading" Source="fundo_animado" IsAnimationPlaying="true" Aspect="AspectFit" Scale="0.3" BackgroundColor="Transparent" IsVisible="{Binding IsLoading}" />
+
+		</StackLayout>				
+	</ScrollView>
+	</Grid>
+</ContentPage>
